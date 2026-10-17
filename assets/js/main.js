@@ -1,10 +1,11 @@
-/* ── GOOGLE ADS CONVERSIONS (AW-16799190588) ── */
+/* ── GOOGLE ADS CONVERSIONS (AW-16799190588, AW-17865495674) ── */
 // Contact: AW-16799190588/1bXfCJjJ9I0dELycvco- (fires on call-link clicks, not on pageview)
 // Purchase: AW-16799190588/gPTnCL2G94wdELycvco- (call reportPurchaseConversion(id) only on a real purchase/thank-you)
 function reportContactConversion() {
   try {
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'conversion', { 'send_to': 'AW-16799190588/1bXfCJjJ9I0dELycvco-' });
+      window.gtag('event', 'conversion', { 'send_to': 'AW-17865495674/e3LhCJv5lJcdEPqo98ZC', 'transaction_id': '' });
     }
   } catch (e) { /* noop */ }
 }
