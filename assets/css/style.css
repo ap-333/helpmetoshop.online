@@ -85,6 +85,16 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:0 56px;height:
 .store-tile svg{width:100%;height:100%;display:block;}
 .store-note{font-size:12px;color:var(--ink-lighter);font-weight:400;}
 
+/* FLOATING DECORATIVE ELEMENTS */
+.float-el{position:absolute;opacity:0.4;pointer-events:none;user-select:none;z-index:0;}
+.f-hero-1{width:200px;height:200px;top:20%;right:5%;animation:float 6s ease-in-out infinite;}
+.f-hero-2{width:140px;height:140px;top:60%;left:-8%;animation:float 8s ease-in-out infinite;}
+.f-tool-1{width:180px;height:180px;top:15%;right:8%;animation:float 7s ease-in-out infinite;}
+.f-tool-2{width:120px;height:120px;bottom:10%;left:-5%;animation:float 9s ease-in-out infinite;}
+.f-sec-1{width:160px;height:160px;bottom:5%;right:3%;animation:float 7.5s ease-in-out infinite;}
+.slow{animation-duration:12s;}
+@keyframes float{0%,100%{transform:translateY(0px);}50%{transform:translateY(-20px);}}
+
 /* CALL CARD */
 .call-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);}
 .cc-head{background:linear-gradient(135deg,var(--secondary) 0%,#0891B2 100%);padding:32px;position:relative;overflow:hidden;color:#fff;}
