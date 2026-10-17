@@ -87,12 +87,12 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:0 56px;height:
 .store-note{font-size:11px;color:var(--ink-lighter);font-weight:400;line-height:1.4;white-space:nowrap;}
 
 /* FLOATING DECORATIVE ELEMENTS */
-.float-el{position:absolute;opacity:0.4;pointer-events:none;user-select:none;z-index:0;}
-.f-hero-1{width:200px;height:200px;top:20%;right:5%;animation:float 6s ease-in-out infinite;}
-.f-hero-2{width:140px;height:140px;top:60%;left:-8%;animation:float 8s ease-in-out infinite;}
-.f-tool-1{width:180px;height:180px;top:15%;right:8%;animation:float 7s ease-in-out infinite;}
-.f-tool-2{width:120px;height:120px;bottom:10%;left:-5%;animation:float 9s ease-in-out infinite;}
-.f-sec-1{width:160px;height:160px;bottom:5%;right:3%;animation:float 7.5s ease-in-out infinite;}
+.float-el{position:absolute;opacity:0.3;pointer-events:none;user-select:none;z-index:-1;}
+.f-hero-1{width:200px;height:200px;top:10%;right:2%;animation:float 6s ease-in-out infinite;}
+.f-hero-2{width:140px;height:140px;top:65%;left:-80px;animation:float 8s ease-in-out infinite;}
+.f-tool-1{width:180px;height:180px;top:10%;right:5%;animation:float 7s ease-in-out infinite;}
+.f-tool-2{width:120px;height:120px;bottom:10%;left:-100px;animation:float 9s ease-in-out infinite;}
+.f-sec-1{width:160px;height:160px;bottom:5%;right:2%;animation:float 7.5s ease-in-out infinite;}
 .slow{animation-duration:12s;}
 @keyframes float{0%,100%{transform:translateY(0px);}50%{transform:translateY(-20px);}}
 
@@ -291,6 +291,11 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:56px 56p
   .hero-inner,.issues-inner,.how-inner,.cov-inner,.tools-inner,.us-inner,.cta-inner,.faq-inner,.ft{padding:0;}
   .hero,.issues-sec,.how-sec,.cov-sec,.tools-sec,.us-sec,.cta-sec,.faq-sec,footer{padding-left:20px;padding-right:20px;}
 
+  /* Show floating elements on tablet with adjusted positioning */
+  .float-el{display:block;}
+  .f-hero-1{width:150px;height:150px;top:15%;right:2%;}
+  .f-hero-2{width:100px;height:100px;top:65%;left:-50px;}
+
   /* Hero */
   .hero{padding:50px 20px;}
   .hero-inner{grid-template-columns:1fr;gap:30px;padding:0;}
@@ -362,6 +367,9 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:56px 56p
   .store-tile{width:28px;height:28px;border-radius:5px;}
   .store-tile i{font-size:14px;}
   .store-note{font-size:10px;}
+
+  /* Hide floating elements on mobile */
+  .float-el{display:none;}
 
   /* Cards */
   .iss-card,.cov-card,.hw-card,.tool-card{padding:16px;}
