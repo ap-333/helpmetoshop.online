@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpMeShop Logo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 60px;
+      color: #1f2937;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+
+    .logo-box {
+      background: white;
+      border-radius: 16px;
+      padding: 60px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-display {
+      width: 220px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .logo-desc {
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .brand-section {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .brand-section h2 {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #1f2937;
+    }
+
+    .brand-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      background: white;
+      padding: 60px 40px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .brand-icon {
+      width: 160px;
+      height: 160px;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #9ca3af;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HelpMeShop Logo System</h1>
+
+    <div class="grid">
+      <!-- Logo 1: Phone Icon -->
+      <div class="logo-box">
+        <div class="logo-display">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+            <defs>
+              <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FFA500"/>
+                <stop offset="100%" style="stop-color:#FF6B6B"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Bag -->
+            <path d="M 50 75 L 65 35 Q 65 25 80 25 L 120 25 Q 135 25 135 35 L 150 75 L 50 75 Z" fill="url(#g1)"/>
+            <path d="M 50 75 L 55 195 Q 55 210 75 210 L 125 210 Q 145 210 145 195 L 150 75" fill="url(#g1)"/>
+
+            <!-- Handles -->
+            <path d="M 70 75 Q 70 30 100 18 Q 130 30 130 75" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Icon Circle -->
+            <circle cx="100" cy="130" r="45" fill="none" stroke="white" stroke-width="4"/>
+
+            <!-- Phone Icon -->
+            <g transform="translate(100, 130)">
+              <rect x="-22" y="-30" width="44" height="60" rx="6" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="0" cy="-24" r="2" fill="white"/>
+              <line x1="-16" y1="-10" x2="16" y2="-10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="-16" y1="2" x2="16" y2="2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="-16" y1="14" x2="16" y2="14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-title">Phone Icon</div>
+        <div class="logo-desc">Direct call-to-action support</div>
+      </div>
+
+      <!-- Logo 2: Checkmark Icon -->
+      <div class="logo-box">
+        <div class="logo-display">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+            <defs>
+              <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FFA500"/>
+                <stop offset="100%" style="stop-color:#FF6B6B"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Bag -->
+            <path d="M 50 75 L 65 35 Q 65 25 80 25 L 120 25 Q 135 25 135 35 L 150 75 L 50 75 Z" fill="url(#g2)"/>
+            <path d="M 50 75 L 55 195 Q 55 210 75 210 L 125 210 Q 145 210 145 195 L 150 75" fill="url(#g2)"/>
+
+            <!-- Handles -->
+            <path d="M 70 75 Q 70 30 100 18 Q 130 30 130 75" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Icon Circle -->
+            <circle cx="100" cy="130" r="45" fill="none" stroke="white" stroke-width="4"/>
+
+            <!-- Checkmark Icon -->
+            <g transform="translate(100, 130)">
+              <path d="M -20 2 L -6 18 L 22 -12" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-title">Checkmark Icon</div>
+        <div class="logo-desc">Problem resolved messaging</div>
+      </div>
+
+      <!-- Logo 3: Headset Icon -->
+      <div class="logo-box">
+        <div class="logo-display">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+            <defs>
+              <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FFA500"/>
+                <stop offset="100%" style="stop-color:#FF6B6B"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Bag -->
+            <path d="M 50 75 L 65 35 Q 65 25 80 25 L 120 25 Q 135 25 135 35 L 150 75 L 50 75 Z" fill="url(#g3)"/>
+            <path d="M 50 75 L 55 195 Q 55 210 75 210 L 125 210 Q 145 210 145 195 L 150 75" fill="url(#g3)"/>
+
+            <!-- Handles -->
+            <path d="M 70 75 Q 70 30 100 18 Q 130 30 130 75" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Icon Circle -->
+            <circle cx="100" cy="130" r="45" fill="none" stroke="white" stroke-width="4"/>
+
+            <!-- Headset Icon -->
+            <g transform="translate(100, 130)">
+              <path d="M -28 -2 Q -28 -18 -12 -22 Q 0 -24 12 -22 Q 28 -18 28 -2" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="-22" cy="6" r="10" fill="none" stroke="white" stroke-width="4"/>
+              <circle cx="22" cy="6" r="10" fill="none" stroke="white" stroke-width="4"/>
+              <path d="M -22 16 Q -22 24 -20 28" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-title">Headset Icon</div>
+        <div class="logo-desc">Customer service support</div>
+      </div>
+    </div>
+
+    <!-- Brand Lockup -->
+    <div class="brand-section">
+      <h2>Brand Lockup</h2>
+      <div class="brand-display">
+        <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="brand-icon">
+          <defs>
+            <linearGradient id="gbrand" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#FFA500"/>
+              <stop offset="100%" style="stop-color:#FF6B6B"/>
+            </linearGradient>
+          </defs>
+          <path d="M 50 75 L 65 35 Q 65 25 80 25 L 120 25 Q 135 25 135 35 L 150 75 L 50 75 Z" fill="url(#gbrand)"/>
+          <path d="M 50 75 L 55 195 Q 55 210 75 210 L 125 210 Q 145 210 145 195 L 150 75" fill="url(#gbrand)"/>
+          <path d="M 70 75 Q 70 30 100 18 Q 130 30 130 75" stroke="white" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="100" cy="130" r="45" fill="none" stroke="white" stroke-width="4"/>
+          <g transform="translate(100, 130)">
+            <rect x="-22" y="-30" width="44" height="60" rx="6" fill="none" stroke="white" stroke-width="4"/>
+            <circle cx="0" cy="-24" r="2" fill="white"/>
+            <line x1="-16" y1="-10" x2="16" y2="-10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="-16" y1="2" x2="16" y2="2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="brand-name">HelpMeShop</div>
+        <div class="brand-tagline">SHOPPING SUPPORT 24/7</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
