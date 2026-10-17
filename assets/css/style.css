@@ -1,14 +1,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  /* Cloudflare Orange */
-  --or:#F6821F;
-  --or-d:#E46F0E;
-  --or-dd:#B85A0B;
-  --or-l:rgba(246,130,31,.12);
-  --or-m:rgba(246,130,31,.32);
-  /* 3rd complementary accent: Sky Blue (direct complement of orange) */
-  --accent:#38BDF8;
-  --accent-d:#0EA5E9;
+  /* HelpMeShop Teal Primary */
+  --or:#06B6D4;
+  --or-d:#0891B2;
+  --or-dd:#0E7490;
+  --or-l:rgba(6,182,212,.12);
+  --or-m:rgba(6,182,212,.32);
+  /* Vibrant Purple Accent */
+  --accent:#A855F7;
+  --accent-d:#9333EA;
   /* AMOLED black system */
   --bg:#000000;
   --ink:#FFFFFF;
