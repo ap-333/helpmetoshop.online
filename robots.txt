@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /local/
 
-Sitemap: https://shoppingassist.online/sitemap.xml
+Sitemap: https://helpmeshop.online/sitemap.xml

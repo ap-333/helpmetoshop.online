@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shoppingassist.online/</loc>
+    <loc>https://helpmeshop.online/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/refund-calculator/</loc>
+    <loc>https://helpmeshop.online/refund-calculator/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/claim-letter/</loc>
+    <loc>https://helpmeshop.online/claim-letter/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/privacy/</loc>
+    <loc>https://helpmeshop.online/privacy/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/terms/</loc>
+    <loc>https://helpmeshop.online/terms/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/cookies/</loc>
+    <loc>https://helpmeshop.online/cookies/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://shoppingassist.online/refund-policy/</loc>
+    <loc>https://helpmeshop.online/refund-policy/</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
