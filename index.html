@@ -405,6 +405,66 @@
     </a>
   </div>
 
+  <!-- POPUP CTA MODAL -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-modal">
+      <button class="popup-close" id="popupClose" aria-label="Close popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="popup-content">
+        <div class="popup-icon">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <h2>Shopping Problem?</h2>
+        <p>Don't wait on hold or struggle alone. Get expert help from real US-based specialists who solve shopping issues fast.</p>
+        <div class="popup-benefits">
+          <div class="popup-benefit">
+            <i class="fa-solid fa-check"></i>
+            <span>Missing orders, stuck refunds, payment issues</span>
+          </div>
+          <div class="popup-benefit">
+            <i class="fa-solid fa-check"></i>
+            <span>Available 24/7, weekends & holidays</span>
+          </div>
+          <div class="popup-benefit">
+            <i class="fa-solid fa-check"></i>
+            <span>No bots, no waiting. Just real solutions.</span>
+          </div>
+        </div>
+        <a href="tel:+18888825419" class="popup-cta">
+          <i class="fa-solid fa-phone"></i> Call Now (888) 882-5419
+        </a>
+        <button class="popup-dismiss" id="popupDismiss" type="button">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/main.js?v=10"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popupOverlay = document.getElementById('popupOverlay');
+      const popupClose = document.getElementById('popupClose');
+      const popupDismiss = document.getElementById('popupDismiss');
+
+      // Show popup after 3 seconds
+      const popupTimer = setTimeout(() => {
+        popupOverlay.classList.add('active');
+      }, 3000);
+
+      // Close popup
+      const closePopup = () => {
+        popupOverlay.classList.remove('active');
+        clearTimeout(popupTimer);
+      };
+
+      popupClose.addEventListener('click', closePopup);
+      popupDismiss.addEventListener('click', closePopup);
+
+      // Close when clicking overlay background
+      popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) closePopup();
+      });
+    });
+  </script>
 </body>
 </html>
