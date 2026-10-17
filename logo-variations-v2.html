@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpMeShop - Logo Variations V2 (Shopping Bag + Phone)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #1f2937;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .logo-display {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .horizontal-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .lockup-icon {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+
+    .lockup-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .lockup-tagline {
+      font-size: 11px;
+      color: #f97316;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .bg-dark {
+      background: #1f2937;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HelpMeShop Logo Variations V2</h1>
+    <p class="subtitle">Bold shopping bag designs with integrated phone/call icons</p>
+
+    <!-- ICON VARIATIONS -->
+    <div class="section">
+      <h2 class="section-title">Primary Icon Variations</h2>
+      <div class="grid">
+
+        <!-- Variation 1: Phone Receiver on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none" stroke-width="8" stroke-linecap="round"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Phone Receiver Icon -->
+              <g transform="translate(100, 110)">
+                <path d="M -20 -15 Q -20 -20 -15 -20 L 15 -20 Q 20 -20 20 -15 L 20 15 Q 20 20 15 20 L -15 20 Q -20 20 -20 15 Z" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="-8" cy="-8" r="2" fill="white"/>
+                <path d="M -10 5 L 10 5 M -10 10 L 10 10 M -10 15 L 6 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Phone on Bag</div>
+          <div class="card-desc">Direct phone support symbol</div>
+        </div>
+
+        <!-- Variation 2: Headphone on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Headphone Icon -->
+              <g transform="translate(100, 110)">
+                <path d="M -18 -5 Q -18 -15 -8 -18 Q 0 -20 8 -18 Q 18 -15 18 -5" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <rect x="-20" y="0" width="8" height="12" rx="2" fill="white"/>
+                <rect x="12" y="0" width="8" height="12" rx="2" fill="white"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Headphones on Bag</div>
+          <div class="card-desc">Customer support/service</div>
+        </div>
+
+        <!-- Variation 3: Ringing Phone Bell on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Ringing Bell Icon -->
+              <g transform="translate(100, 110)">
+                <path d="M -8 -10 Q -12 -10 -12 -6 L -12 8 Q -12 12 -8 12 L 8 12 Q 12 12 12 8 L 12 -6 Q 12 -10 8 -10 Z" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M -16 0 Q -20 -2 -22 0 M 16 0 Q 20 -2 22 0" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="0" cy="15" r="1.5" fill="white"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Ringing Bell on Bag</div>
+          <div class="card-desc">24/7 active support</div>
+        </div>
+
+        <!-- Variation 4: Phone + Checkmark on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Phone Icon -->
+              <g transform="translate(80, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="0" cy="6" r="1" fill="white"/>
+              </g>
+              <!-- Checkmark -->
+              <g transform="translate(130, 90)">
+                <path d="M -6 0 L -1 5 L 8 -4" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Phone + Checkmark</div>
+          <div class="card-desc">Resolved issues</div>
+        </div>
+
+        <!-- Variation 5: Phone with Plus (Help) on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Phone Icon -->
+              <g transform="translate(85, 115)">
+                <rect x="-8" y="-10" width="16" height="20" rx="2" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <!-- Plus/Help Icon -->
+              <g transform="translate(128, 98)">
+                <path d="M 0 -5 L 0 5 M -5 0 L 5 0" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Phone + Plus</div>
+          <div class="card-desc">Help & support</div>
+        </div>
+
+        <!-- Variation 6: Minimalist Phone Outline on Bag -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <!-- Shopping Bag -->
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <!-- Bag Handles -->
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Minimal Phone Outline -->
+              <rect x="75" y="95" width="50" height="35" rx="4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="75" y1="105" x2="125" y2="105" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="card-title">Minimal Phone</div>
+          <div class="card-desc">Clean, modern style</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCKUP VARIATIONS -->
+    <div class="section">
+      <h2 class="section-title">Logo + Text Variations</h2>
+      <div class="grid">
+
+        <!-- Lockup 1: Icon + Brand Name (Vertical) -->
+        <div class="card">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100px; height: 100px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <path d="M -20 -15 Q -20 -20 -15 -20 L 15 -20 Q 20 -20 20 -15 L 20 15 Q 20 20 15 20 L -15 20 Q -20 20 -20 15 Z" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="-8" cy="-8" r="2" fill="white"/>
+              </g>
+            </svg>
+            <div style="text-align: center;">
+              <div style="font-size: 18px; font-weight: 700; color: #1f2937;">HelpMeShop</div>
+              <div style="font-size: 11px; color: #f97316; font-weight: 600; letter-spacing: 0.5px;">EXPERT SUPPORT 24/7</div>
+            </div>
+          </div>
+          <div class="card-desc" style="margin-top: 16px;">Stacked brand lockup</div>
+        </div>
+
+        <!-- Lockup 2: Icon + Brand (Horizontal) -->
+        <div class="card">
+          <div style="display: flex; align-items: center; gap: 16px; width: 100%;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 70px; height: 70px; flex-shrink: 0;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+            <div>
+              <div style="font-size: 18px; font-weight: 700; color: #1f2937;">HelpMeShop</div>
+              <div style="font-size: 10px; color: #f97316; font-weight: 600;">Shopping Support</div>
+            </div>
+          </div>
+          <div class="card-desc" style="margin-top: 16px;">Horizontal lockup</div>
+        </div>
+
+        <!-- Lockup 3: Icon + Full Tagline -->
+        <div class="card">
+          <div style="display: flex; align-items: center; gap: 12px; width: 100%; flex-direction: column; text-align: center;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 80px; height: 80px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <path d="M -18 -5 Q -18 -15 -8 -18 Q 0 -20 8 -18 Q 18 -15 18 -5" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <rect x="-20" y="0" width="8" height="12" rx="2" fill="white"/>
+                <rect x="12" y="0" width="8" height="12" rx="2" fill="white"/>
+              </g>
+            </svg>
+            <div>
+              <div style="font-size: 16px; font-weight: 700; color: #1f2937;">HelpMeShop</div>
+              <div style="font-size: 11px; color: #6b7280; margin-top: 4px;">Fast solutions for shopping issues</div>
+            </div>
+          </div>
+          <div class="card-desc" style="margin-top: 16px;">With description</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLOR & STYLE VARIATIONS -->
+    <div class="section">
+      <h2 class="section-title">Color & Style Variations</h2>
+      <div class="grid">
+
+        <!-- Orange (Primary) -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Orange Primary</div>
+          <div class="card-desc">#F97316 - Main brand</div>
+        </div>
+
+        <!-- Blue Accent -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#2563EB" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#2563EB" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Blue Accent</div>
+          <div class="card-desc">#2563EB - Alternative</div>
+        </div>
+
+        <!-- Dark Monochrome -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#1f2937" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#1f2937" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="white" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Dark Monochrome</div>
+          <div class="card-desc">#1F2937 - Dark bg</div>
+        </div>
+
+        <!-- Cyan Accent -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#06B6D4" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#06B6D4" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="white" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Cyan Support</div>
+          <div class="card-desc">#06B6D4 - Accent</div>
+        </div>
+
+        <!-- Orange Outline on White -->
+        <div class="card">
+          <div class="logo-display" style="background: white; border: 2px solid #F97316;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="none" stroke="#F97316" stroke-width="6"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="none" stroke="#F97316" stroke-width="6"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#F97316" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Outline Version</div>
+          <div class="card-desc">White background use</div>
+        </div>
+
+        <!-- Orange Gradient -->
+        <div class="card">
+          <div class="logo-display">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+              <defs>
+                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#EA580C;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="url(#orangeGrad)" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="url(#orangeGrad)" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <g transform="translate(100, 110)">
+                <rect x="-10" y="-12" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-title">Orange Gradient</div>
+          <div class="card-desc">Premium look</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIZE GUIDE -->
+    <div class="section">
+      <h2 class="section-title">Size Variations</h2>
+      <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; margin: 0 auto 8px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div style="font-size: 12px; color: #6b7280;">32px - Small</div>
+          </div>
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 64px; height: 64px; margin: 0 auto 8px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div style="font-size: 12px; color: #6b7280;">64px - Medium</div>
+          </div>
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 128px; height: 128px; margin: 0 auto 8px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div style="font-size: 12px; color: #6b7280;">128px - Large</div>
+          </div>
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 200px; height: 200px; margin: 0 auto 8px;">
+              <path d="M 50 60 L 60 40 Q 60 30 70 30 L 130 30 Q 140 30 140 40 L 150 60 L 50 60 Z" fill="#F97316" stroke="none"/>
+              <path d="M 50 60 L 60 160 Q 60 170 70 170 L 130 170 Q 140 170 140 160 L 150 60" fill="#F97316" stroke="none"/>
+              <path d="M 75 60 Q 75 40 100 35 Q 125 40 125 60" stroke="#1f2937" stroke-width="10" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div style="font-size: 12px; color: #6b7280;">200px - XL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USAGE GUIDE -->
+    <div class="section">
+      <h2 class="section-title">Usage Guidelines</h2>
+      <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+          <div>
+            <h3 style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">Website & Digital</h3>
+            <ul style="font-size: 13px; color: #6b7280; line-height: 1.6; padding-left: 16px;">
+              <li>Hero: 200px+ bag icon with text</li>
+              <li>Header: 64px icon + brand name</li>
+              <li>Favicon: 32px icon only</li>
+              <li>Social: 256x256px square</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">Print & Branding</h3>
+            <ul style="font-size: 13px; color: #6b7280; line-height: 1.6; padding-left: 16px;">
+              <li>Primary: Orange on white</li>
+              <li>Secondary: Orange on light gray</li>
+              <li>Monochrome: Dark on white</li>
+              <li>Minimum size: 0.5 inches</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">Design Notes</h3>
+            <ul style="font-size: 13px; color: #6b7280; line-height: 1.6; padding-left: 16px;">
+              <li>Bold, rounded, friendly style</li>
+              <li>Always maintain clear space</li>
+              <li>Never rotate or distort</li>
+              <li>White phone icon for contrast</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
