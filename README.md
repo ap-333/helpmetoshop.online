@@ -1,6 +1,6 @@
-﻿# HelpMeShop (helpmeshop.online)
+﻿# HelpMeToShop (helpmetoshop.online)
 
-Clean rebuild, rebranded from `vrogo.online` to **HelpMeShop** (`https://helpmeshop.online/`).
+Clean rebuild, rebranded from `vrogo.online` to **HelpMeToShop** (`https://helpmetoshop.online/`).
 
 ## Theme
 

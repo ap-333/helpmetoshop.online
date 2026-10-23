@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /local/
 
-Sitemap: https://helpmeshop.online/sitemap.xml
+Sitemap: https://helpmetoshop.online/sitemap.xml
