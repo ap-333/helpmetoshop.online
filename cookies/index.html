@@ -28,10 +28,11 @@
   <link rel="manifest" href="../site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="../assets/fonts/fa-solid-subset.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/icons.css?v=1" />
 
-  <link rel="stylesheet" href="../assets/css/style.css?v=9" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=12" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"Cookie Settings","url":"https://helpmetoshop.online/cookies/","isPartOf":{"@type":"WebSite","name":"HelpMeToShop","url":"https://helpmetoshop.online/"}}
@@ -44,7 +45,26 @@
   </script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16799190588"></script>
+  <script>
+    // Load gtag.js after first interaction or shortly after page load so it doesn't block rendering.
+    // gtag() calls made before then queue in dataLayer and send once it loads.
+    (function () {
+      var done = false;
+      function loadGtag() {
+        if (done) { return; }
+        done = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16799190588';
+        document.head.appendChild(s);
+      }
+      window.loadGtag = loadGtag;
+      ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 1500); });
+    })();
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -60,7 +80,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
-      <a href="../" style="display:flex;align-items:center;gap:11px;" aria-label="HelpMeToShop home"><img class="brand-mark" src="../assets/images/logo.svg" alt="HelpMeToShop logo" />
+      <a href="../" style="display:flex;align-items:center;gap:11px;" aria-label="HelpMeToShop home"><img class="brand-mark" src="../assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" />
       <span class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></span></a>
     </div>
     <ul class="nav-links">
@@ -92,9 +112,9 @@
   <section class="hero">
     <div class="hero-inner" style="grid-template-columns:1fr;gap:24px;padding-top:64px;padding-bottom:48px;">
       <div class="hero-l">
-        <div class="hero-kicker"><span class="kicker-dot"></span> Legal · Last updated October 5, 2026</div>
+        <div class="hero-kicker"><span class="kicker-dot"></span> Legal · Last updated November 10, 2026</div>
         <h1>Cookie <span>Settings</span></h1>
-        <p>Short version: we set no tracking or advertising cookies. Everything optional stays off unless you turn it on.</p>
+        <p>Short version: our own site sets no cookies. We use Google Analytics and Google Ads measurement, which use Google cookies to count visits and calls from ads.</p>
       </div>
     </div>
   </section>
@@ -117,23 +137,25 @@
         </div>
 
         <h2 id="ours">1. Cookies we set: none for tracking</h2>
-        <p>HelpMeToShop does <strong>not</strong> use first-party tracking, advertising, or analytics cookies of its own. Our free tools keep what you type only in your browser's short-term page memory, which disappears when you close or refresh the page. We do not store your tracking numbers, refund dates, or claim drafts on our servers.</p>
-        <p>We do run <strong>Google Ads measurement (Google tag AW-16799190588)</strong> on every page to count phone-call conversions from ads. Google may set or read its own cookies (for example on googletagmanager.com / googleadservices.com) to attribute a call click to an ad. See section 2.</p>
+        <p>HelpMeToShop's own code sets no cookies. The only exception is the Google measurement tags described below, which set Google cookies on this domain (such as <code>_ga</code> and <code>_gcl_au</code>). Our free tools keep what you type only in your browser's short-term page memory, which disappears when you close or refresh the page. We do not store your tracking numbers, refund dates, or claim drafts on our servers. The homepage keeps one session-only flag in your browser (not a cookie) so its call reminder shows at most once per visit; it clears when you close the tab.</p>
+        <p>We run <strong>Google Analytics (G-RZEFHK5T7W)</strong> to understand site visits, and <strong>Google Ads measurement (AW-16799190588, AW-17865495674)</strong> on every page to count phone-call conversions from ads. Google may set or read its own cookies (for example on googletagmanager.com / googleadservices.com) to attribute a call click to an ad. See section 2.</p>
 
         <h2 id="third">2. Third-party content and measurement</h2>
         <p>To keep the site fast and readable we load widely used third-party files, and to measure ad performance we run Google Ads:</p>
         <ul>
           <li><strong>Google Fonts</strong> (fonts.googleapis.com / fonts.gstatic.com) for the Inter typeface;</li>
-          <li><strong>Font Awesome</strong> via cdnjs (cdnjs.cloudflare.com) for icons;</li>
-          <li><strong>Google Ads tag</strong> (www.googletagmanager.com, ID AW-16799190588) on every page for basic visit measurement, plus a <strong>Contact conversion</strong> (AW-16799190588/1bXfCJjJ9I0dELycvco-) that fires only when you tap a call link. No Purchase conversion fires automatically; it only fires if a real purchase event calls <code>reportPurchaseConversion()</code>.</li>
+          <li><strong>Font Awesome</strong> icons, served from this site (no third-party request);</li>
+          <li><strong>Google Analytics</strong> (Google tag G-RZEFHK5T7W) on every page for aggregate visit statistics;</li>
+          <li><strong>Google Ads tags</strong> (www.googletagmanager.com, IDs AW-16799190588 and AW-17865495674) on every page for basic visit measurement, plus a <strong>Contact conversion</strong> for each that fires only when you tap a call link. No Purchase conversion fires automatically; it only fires if a real purchase event calls <code>reportPurchaseConversion()</code>.</li>
         </ul>
         <p>Those providers may receive standard request data (such as your IP address and browser type) under their own privacy policies when your browser fetches the files. They do not receive anything you type into our tools. We place no social-media pixels on this site.</p>
 
         <h2 id="manage">3. How to manage cookies</h2>
-        <p>Because we set no optional first-party cookies, there is nothing to opt out of here for our own storage. For Google Ads measurement:</p>
+        <p>Our own code stores nothing that needs an opt-out. For Google Analytics and Google Ads measurement:</p>
         <ul>
           <li>use your browser's <strong>Settings &gt; Privacy</strong> to block third-party cookies or clear site data;</li>
           <li>use private / incognito mode if you want zero local history;</li>
+          <li>opt out of Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a>, and of personalized ads at <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a>;</li>
           <li>note that blocking all cookies does not break our tools, which do not depend on cookies.</li>
         </ul>
         <p>If we ever add an optional feature that needs storage (such as remembering a preference), we will ask first and explain how to turn it off.</p>
@@ -161,7 +183,7 @@
     <div class="ft">
       <div class="ft-top">
         <div class="ft-logo">
-          <div class="brand-lockup"><img class="brand-mark ft-mark" src="../assets/images/logo.svg" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
+          <div class="brand-lockup"><img class="brand-mark ft-mark" src="../assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
           <p>An independent, US-based helpline for everyday online shopping problems.</p>
           <a href="tel:+18888824649" class="ft-phone">(888) 882-4649</a>
           <span class="ft-domain">helpmetoshop.online</span>
@@ -188,6 +210,6 @@
     </a>
   </div>
 
-  <script src="../assets/js/main.js?v=13"></script>
+  <script src="../assets/js/main.js?v=14"></script>
 </body>
 </html>

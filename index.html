@@ -28,10 +28,11 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/fa-solid-subset.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/icons.css?v=1" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=9" />
+  <link rel="stylesheet" href="assets/css/style.css?v=12" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"HelpMeToShop","url":"https://helpmetoshop.online/","logo":"https://helpmetoshop.online/assets/images/icon-512.png","contactPoint":{"@type":"ContactPoint","telephone":"+1-888-882-4649","contactType":"customer support","areaServed":"US","availableLanguage":"en"}}
@@ -53,7 +54,26 @@
   </script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16799190588"></script>
+  <script>
+    // Load gtag.js after first interaction or shortly after page load so it doesn't block rendering.
+    // gtag() calls made before then queue in dataLayer and send once it loads.
+    (function () {
+      var done = false;
+      function loadGtag() {
+        if (done) { return; }
+        done = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16799190588';
+        document.head.appendChild(s);
+      }
+      window.loadGtag = loadGtag;
+      ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 1500); });
+    })();
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -64,7 +84,7 @@
     gtag('config', 'G-RZEFHK5T7W');
   </script>
 </head>
-<body>
+<body data-popup="call">
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="ann">
@@ -75,7 +95,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
-      <img class="brand-mark" src="assets/images/logo.svg" alt="HelpMeToShop logo" />
+      <img class="brand-mark" src="assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" />
       <div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div>
       <span class="us-flag" title="United States"></span>
     </div>
@@ -391,7 +411,7 @@
     <div class="ft">
       <div class="ft-top">
         <div class="ft-logo">
-          <div class="brand-lockup"><img class="brand-mark ft-mark" src="assets/images/logo.svg" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
+          <div class="brand-lockup"><img class="brand-mark ft-mark" src="assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
           <p>An independent, US-based helpline for everyday online shopping problems: orders, refunds, payments, accounts, and deliveries from any store or marketplace.</p>
           <a href="tel:+18888824649" class="ft-phone">(888) 882-4649</a>
           <span class="ft-domain">helpmetoshop.online</span>
@@ -419,66 +439,6 @@
     </a>
   </div>
 
-  <!-- POPUP CTA MODAL -->
-  <div class="popup-overlay" id="popupOverlay">
-    <div class="popup-modal">
-      <button class="popup-close" id="popupClose" aria-label="Close popup">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="popup-content">
-        <div class="popup-icon">
-          <i class="fa-solid fa-circle-exclamation"></i>
-        </div>
-        <h2>Shopping Problem?</h2>
-        <p>Don't wait on hold or struggle alone. Get expert help from real US-based specialists who solve shopping issues fast.</p>
-        <div class="popup-benefits">
-          <div class="popup-benefit">
-            <i class="fa-solid fa-check"></i>
-            <span>Missing orders, stuck refunds, payment issues</span>
-          </div>
-          <div class="popup-benefit">
-            <i class="fa-solid fa-check"></i>
-            <span>Available 24/7, weekends & holidays</span>
-          </div>
-          <div class="popup-benefit">
-            <i class="fa-solid fa-check"></i>
-            <span>No bots, no waiting. Just real solutions.</span>
-          </div>
-        </div>
-        <a href="tel:+18888824649" class="popup-cta">
-          <i class="fa-solid fa-phone"></i> Call Now (888) 882-4649
-        </a>
-        <button class="popup-dismiss" id="popupDismiss" type="button">Maybe later</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="assets/js/main.js?v=13"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const popupOverlay = document.getElementById('popupOverlay');
-      const popupClose = document.getElementById('popupClose');
-      const popupDismiss = document.getElementById('popupDismiss');
-
-      // Show popup after 3 seconds
-      const popupTimer = setTimeout(() => {
-        popupOverlay.classList.add('active');
-      }, 3000);
-
-      // Close popup
-      const closePopup = () => {
-        popupOverlay.classList.remove('active');
-        clearTimeout(popupTimer);
-      };
-
-      popupClose.addEventListener('click', closePopup);
-      popupDismiss.addEventListener('click', closePopup);
-
-      // Close when clicking overlay background
-      popupOverlay.addEventListener('click', (e) => {
-        if (e.target === popupOverlay) closePopup();
-      });
-    });
-  </script>
+  <script src="assets/js/main.js?v=14"></script>
 </body>
 </html>

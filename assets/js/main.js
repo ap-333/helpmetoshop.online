@@ -23,9 +23,17 @@ window.reportContactConversion = reportContactConversion;
 window.reportPurchaseConversion = reportPurchaseConversion;
 
 // Delegated so dynamically injected tel: links (e.g. refund-calculator result) also count.
+// Pointerdown fires before the click, so a delayed gtag.js is already requested by the time
+// the conversion is queued; queued events send as soon as it loads.
+document.addEventListener('pointerdown', function (e) {
+  if (e.target && e.target.closest && e.target.closest('a[href^="tel:"]') && window.loadGtag) { window.loadGtag(); }
+}, { passive: true });
 document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
-  if (a) { reportContactConversion(); }
+  if (a) {
+    if (window.loadGtag) { window.loadGtag(); }
+    reportContactConversion();
+  }
 });
 
 // Mobile nav toggle
@@ -164,6 +172,105 @@ document.getElementById('year') && (document.getElementById('year').textContent 
   if (claimBtn) {
     claimBtn.addEventListener('click', runClaim);
     claimCopy.addEventListener('click', runCopy);
+  }
+})();
+
+/* ── LAZY CALL POP-UP (pages with <body data-popup="call">) ── */
+// Not in the page HTML and never on arrival: the modal is built only once the visitor
+// has engaged (scrolled halfway or, on desktop, moved to leave), at most once per session,
+// and never after they've already tapped a call link or while they're typing in a tool.
+(function () {
+  'use strict';
+  if (!document.body || document.body.getAttribute('data-popup') !== 'call') { return; }
+
+  var KEY = 'hmts_popup_seen';
+  var MIN_DWELL_MS = 8000;
+  var SCROLL_DEPTH = 0.5;
+  var start = Date.now();
+  var armed = true;
+
+  function seen() { try { return sessionStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+  function markSeen() { try { sessionStorage.setItem(KEY, '1'); } catch (e) { /* noop */ } }
+  if (seen()) { return; }
+
+  function disarm() {
+    armed = false;
+    window.removeEventListener('scroll', onScroll);
+    document.removeEventListener('mouseout', onExit);
+  }
+
+  // Already called: don't interrupt them later.
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.closest && e.target.closest('a[href^="tel:"]')) { markSeen(); disarm(); }
+  });
+
+  function build() {
+    var wrap = document.createElement('div');
+    wrap.className = 'popup-overlay';
+    wrap.innerHTML =
+      '<div class="popup-modal" role="dialog" aria-modal="true" aria-labelledby="popupTitle">' +
+        '<button class="popup-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>' +
+        '<div class="popup-content">' +
+          '<div class="popup-icon"><i class="fa-solid fa-headset"></i></div>' +
+          '<h2 id="popupTitle">Still sorting out an order?</h2>' +
+          '<p>Talk it through with a US-based shopping specialist. We will help you plan the next step with the store, carrier, or payment provider.</p>' +
+          '<div class="popup-benefits">' +
+            '<div class="popup-benefit"><i class="fa-solid fa-check"></i><span>Missing orders, stuck refunds, payment issues</span></div>' +
+            '<div class="popup-benefit"><i class="fa-solid fa-check"></i><span>Available 24/7, weekends &amp; holidays</span></div>' +
+            '<div class="popup-benefit"><i class="fa-solid fa-check"></i><span>Independent service, not affiliated with any store</span></div>' +
+          '</div>' +
+          '<a href="tel:+18888824649" class="popup-cta"><i class="fa-solid fa-phone"></i> Call Now (888) 882-4649</a>' +
+          '<button class="popup-dismiss" type="button">Maybe later</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    return wrap;
+  }
+
+  function show() {
+    if (!armed || seen()) { return; }
+    var a = document.activeElement;
+    if (a && /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)) { return; } // mid-task in a tool; try again later
+    disarm();
+    markSeen();
+    var prevFocus = a;
+    var overlay = build();
+    function close() {
+      overlay.classList.remove('active');
+      document.removeEventListener('keydown', onKey);
+      setTimeout(function () { overlay.remove(); }, 300);
+      if (prevFocus && prevFocus.focus) { prevFocus.focus(); }
+    }
+    function onKey(e) { if (e.key === 'Escape') { close(); } }
+    overlay.querySelector('.popup-close').addEventListener('click', close);
+    overlay.querySelector('.popup-dismiss').addEventListener('click', close);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) { close(); } });
+    document.addEventListener('keydown', onKey);
+    requestAnimationFrame(function () {
+      overlay.classList.add('active');
+      overlay.querySelector('.popup-cta').focus({ preventScroll: true });
+    });
+  }
+
+  function engagedLongEnough() { return Date.now() - start >= MIN_DWELL_MS; }
+
+  var scrollTick = false;
+  function onScroll() {
+    if (scrollTick) { return; }
+    scrollTick = true;
+    requestAnimationFrame(function () {
+      scrollTick = false;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max > 0 && window.scrollY / max >= SCROLL_DEPTH && engagedLongEnough()) { show(); }
+    });
+  }
+  function onExit(e) {
+    if (!e.relatedTarget && e.clientY <= 0 && engagedLongEnough()) { show(); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mouseout', onExit);
   }
 })();
 

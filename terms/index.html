@@ -28,10 +28,11 @@
   <link rel="manifest" href="../site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="../assets/fonts/fa-solid-subset.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/icons.css?v=1" />
 
-  <link rel="stylesheet" href="../assets/css/style.css?v=9" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=12" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"Terms of Use","url":"https://helpmetoshop.online/terms/","isPartOf":{"@type":"WebSite","name":"HelpMeToShop","url":"https://helpmetoshop.online/"}}
@@ -44,7 +45,26 @@
   </script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16799190588"></script>
+  <script>
+    // Load gtag.js after first interaction or shortly after page load so it doesn't block rendering.
+    // gtag() calls made before then queue in dataLayer and send once it loads.
+    (function () {
+      var done = false;
+      function loadGtag() {
+        if (done) { return; }
+        done = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16799190588';
+        document.head.appendChild(s);
+      }
+      window.loadGtag = loadGtag;
+      ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGtag, 1500); });
+    })();
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -60,7 +80,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
-      <a href="../" style="display:flex;align-items:center;gap:11px;" aria-label="HelpMeToShop home"><img class="brand-mark" src="../assets/images/logo.svg" alt="HelpMeToShop logo" />
+      <a href="../" style="display:flex;align-items:center;gap:11px;" aria-label="HelpMeToShop home"><img class="brand-mark" src="../assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" />
       <span class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></span></a>
     </div>
     <ul class="nav-links">
@@ -174,7 +194,7 @@
     <div class="ft">
       <div class="ft-top">
         <div class="ft-logo">
-          <div class="brand-lockup"><img class="brand-mark ft-mark" src="../assets/images/logo.svg" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
+          <div class="brand-lockup"><img class="brand-mark ft-mark" src="../assets/images/logo.svg" width="46" height="40" alt="HelpMeToShop logo" /><div class="brand-logo">Help<span>MeToShop</span><small>HELPMETOSHOP.ONLINE</small></div></div>
           <p>An independent, US-based helpline for everyday online shopping problems.</p>
           <a href="tel:+18888824649" class="ft-phone">(888) 882-4649</a>
           <span class="ft-domain">helpmetoshop.online</span>
@@ -201,6 +221,6 @@
     </a>
   </div>
 
-  <script src="../assets/js/main.js?v=13"></script>
+  <script src="../assets/js/main.js?v=14"></script>
 </body>
 </html>
